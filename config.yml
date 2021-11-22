@@ -1,0 +1,142 @@
+# Die Konfiguration ist einfach aufgebaut
+#
+# Für jeden Tag (d.h. für jedes Türchen 1-24) gibt es einen Eintrag
+# Hier legst Du fest:
+#  * Was der Spieler als Geschenk bekommen soll
+#  * Wieviele Einheiten er davon bekommen soll
+#  * Welchen namen das Item bekommen soll (optional)
+#
+# Eine Liste aller verfügbaren Materialen befinset sich unter
+# https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/material.html
+#
+
+# Zum Testen kan hier ein Datum fest eingestellt werden
+
+#fakeday: 7
+
+rewards:
+   1:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   2:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   3:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   4:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   5:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   6:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   7:
+      amount: 3
+      material: DIAMOND
+      name: §2§lHugo
+   8:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   9:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   10:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   11:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   12:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   13:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   14:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   15:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   16:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   17:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   18:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   19:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   20:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   21:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   22:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   23:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+   24:
+      amount: 3
+      material: DIAMOND
+      name: Hugo
+
+# Hier legst Du fest, welches Material
+# in der GUI für die einzelnen Türchen verwendert werden soll.
+# Der Filler ist optional.
+icons:
+   past: GRAY_STAINED_GLASS_PANE
+   closed: PINK_STAINED_GLASS_PANE
+   open: GREEN_STAINED_GLASS_PANE
+   future: RED_STAINED_GLASS_PANE
+#  filler: LIGHT_GRAY_STAINED_GLASS_PANE
+
+# Hier können die Meldungstexte angepaßt werden.
+messages:
+   error: "Fehler"
+   javaException: "Java Exception"
+   playerOnly: "Du kannst nur als Spieler den Adventskalender öffnen"
+   reloadOK: "Du hast die Konfiguration aktualisiert"
+   missingDefinition: "Für den Tag %s fehlt die Türchen-Definition"
+   wrongMaterial: "Für den Tag %s ist die Materialangabe fehlerhaft: %s"
+   guiPast: "Der Tag ist vorbei"
+   guiTodayClosed: "Lass dich überraschen"
+   guiTodayOpen: "Du hast heute schon dein Türchen geöffnet"
+   guiFuture: "Freu dich auf morgen"
+   guiTitle: "Adventskalender"
+   guiLayout: "+-+-+-+-+---------+++-+-++++++-+-+++---------+-+-+-+-+"
+   alreadyOpen: "Du hast das Türchen für heute bereits geöffnet"
+   inventoryFull: "Du hast keinen Platz in deinem Inventar"
+   outOfTimeframe: "Du kannst nur im Advent Dein Türchen öffnen"
+   openOK: "Du hast das Türchen für den Tag %d geöffnet"

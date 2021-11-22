@@ -1,0 +1,28 @@
+name: Adventskalender
+version: 1.0
+description: A german culture christmas calendar
+author: Scientarus
+
+api-version: 1.17
+load: POSTWORLD
+main: de.scientarus.adventskalender.main.Main
+
+permissions:
+    adventskalender.command:
+        description: "Darf der Spieler den Adventskalender aufrufen?"
+        default: op
+
+    adventskalender.reload:
+        description: "Darf der Aufrufer die Adventskalender-Konfiguration aktualisieren?"
+        default: op
+        
+commands:
+    adventskalender:
+        description: "Zeigt den Adventskalender an"
+        permission: adventskalender.command
+        permission-message: "Du hast nicht die Berechtigung den Adventskalender aufzurufen"
+    
+    adventskalenderreload:
+        description: "Aktualisiert die Adventskalender-Konfiguration"
+        permission: adventskalender.reload
+        permission-message: "Du darfst die Adventskalender-Konfiguration nicht aktualisieren" 
