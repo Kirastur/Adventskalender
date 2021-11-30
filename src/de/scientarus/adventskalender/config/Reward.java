@@ -1,32 +1,15 @@
 package de.scientarus.adventskalender.config;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class Reward {
-
-	private final Material material;
-	private final int amount;
-	private final String name;
-
-	public Reward(Material material, int amount, String name) {
-		this.material = material;
-		this.amount = amount;
-		this.name = name;
-	}
-
-	public Material getMaterial() {
-		return material;
-	}
-
-	public int getAmount() {
-		return amount;
-	}
-
-	public String getName() {
-		return name;
-	}
+public record Reward(Material material, int amount, String name, String description, Enchantment enchantmentType,
+		int EnchantmentLevel) {
 
 	public ItemStack buildItemStack() {
 		if ((material == null) || (amount == 0)) {
@@ -36,7 +19,15 @@ public class Reward {
 		if ((name != null) && !name.isEmpty()) {
 			ItemMeta itemMeta = itemStack.getItemMeta();
 			itemMeta.setDisplayName(name);
+			if ((description != null) && !description.isEmpty()) {
+				List<String> lore = new ArrayList<>();
+				lore.add(description);
+				itemMeta.setLore(lore);
+			}
 			itemStack.setItemMeta(itemMeta);
+		}
+		if (enchantmentType != null) {
+			itemStack.addEnchantment(enchantmentType, EnchantmentLevel);
 		}
 		return itemStack;
 	}

@@ -114,7 +114,7 @@ public class GuiManager {
 	}
 
 	protected ItemStack generateFutureDoorlet(int doorletDay) {
-		return generateDoorlet(doorletDay, TYPE_FUTURE, configManager.getIconOpen(),
+		return generateDoorlet(doorletDay, TYPE_FUTURE, configManager.getIconFuture(),
 				configManager.getMessage(Message.GUI_FUTURE));
 	}
 

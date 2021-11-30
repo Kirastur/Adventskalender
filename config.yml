@@ -3,26 +3,41 @@
 # Für jeden Tag (d.h. für jedes Türchen 1-24) gibt es einen Eintrag
 # Hier legst Du fest:
 #  * Was der Spieler als Geschenk bekommen soll
-#  * Wieviele Einheiten er davon bekommen soll
-#  * Welchen namen das Item bekommen soll (optional)
+#  * Wieviele Einheiten er davon bekommen soll (Ein Stück, wenn nicht angegeben)
+#  * Welchen Namen das Item bekommen soll (optional)
+#  * Eine zusätzliche Beschreibung (optional)
+#  * Eine Verzauberung (optional)
 #
-# Eine Liste aller verfügbaren Materialen befinset sich unter
+
+#
+# Eine Liste aller verfügbaren Materialen befindet sich unter
 # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/material.html
 #
 
-# Zum Testen kan hier ein Datum fest eingestellt werden
+#
+#  Eine Verzauberung besteht aus dem Typ und einem Level.
+#  Wenn kein Level angegeben ist, wird das MaxLevel genommen.
+#  Wenn eine ungültige Verzauberung angegeben wird,
+#  gibt das Programm eine Liste aller verfügbarer Verzauberungen aus.
+#
 
-#fakeday: 7
+#
+# Zum Testen kan hier ein Datum fest eingestellt werden
+#
+
+#fakeday: 1
 
 rewards:
    1:
-      amount: 3
-      material: DIAMOND
+      material: GOLDEN_CHESTPLATE
       name: Hugo
+      description: Hallo
+      enchantmentType: protection
+      enchantmentLevel: 4
    2:
       amount: 3
       material: DIAMOND
-      name: Hugo
+      name: "§2§lHugo"
    3:
       amount: 3
       material: DIAMOND
@@ -42,7 +57,7 @@ rewards:
    7:
       amount: 3
       material: DIAMOND
-      name: §2§lHugo
+      name: Hugo
    8:
       amount: 3
       material: DIAMOND
@@ -112,9 +127,11 @@ rewards:
       material: DIAMOND
       name: Hugo
 
+#
 # Hier legst Du fest, welches Material
 # in der GUI für die einzelnen Türchen verwendert werden soll.
 # Der Filler ist optional.
+#
 icons:
    past: GRAY_STAINED_GLASS_PANE
    closed: PINK_STAINED_GLASS_PANE
@@ -122,7 +139,9 @@ icons:
    future: RED_STAINED_GLASS_PANE
 #  filler: LIGHT_GRAY_STAINED_GLASS_PANE
 
+#
 # Hier können die Meldungstexte angepaßt werden.
+#
 messages:
    error: "Fehler"
    javaException: "Java Exception"
@@ -130,6 +149,9 @@ messages:
    reloadOK: "Du hast die Konfiguration aktualisiert"
    missingDefinition: "Für den Tag %s fehlt die Türchen-Definition"
    wrongMaterial: "Für den Tag %s ist die Materialangabe fehlerhaft: %s"
+   wrongEnchantmentType: "Für den Tag %s ist die Verzauberung unbekannt: %s"
+   incompatibleEnchantment: "Für den Tag %s paßt die Verzauberung nicht zum Gegenstand: %s"
+   wrongEnchantmentLevel:  "Für den Tag %s ist der Level der Verzauberung ungültig: %s"
    guiPast: "Der Tag ist vorbei"
    guiTodayClosed: "Lass dich überraschen"
    guiTodayOpen: "Du hast heute schon dein Türchen geöffnet"
