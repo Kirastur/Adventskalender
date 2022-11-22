@@ -13,7 +13,6 @@ import org.bukkit.plugin.Plugin;
 
 import de.scientarus.adventskalender.exception.AdventskalenderException;
 import de.scientarus.adventskalender.messages.Message;
-import joptsimple.internal.Strings;
 
 public class ConfigManager {
 
@@ -108,7 +107,7 @@ public class ConfigManager {
 		if (!enchantmentString.isEmpty()) {
 			enchantmentType = findEnchantment(enchantmentString);
 			if (enchantmentType == null) {
-				String s = String.format("Valid enchantments are: %s", Strings.join(getEnchantmentNames(), ", "));
+				String s = String.format("Valid enchantments are: %s", String.join(", ", getEnchantmentNames()));
 				plugin.getLogger().info(s);
 				throw new AdventskalenderException(
 						String.format(getMessage(Message.WRONG_ENCHANTMENT_TYPE), myDay, materialString));

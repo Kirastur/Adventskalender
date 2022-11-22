@@ -1,10 +1,10 @@
 name: Adventskalender
-version: 1.1
+version: 2.0
 description: A german culture christmas calendar
 author: Scientarus
 website: https://www.spigotmc.org/resources/adventskalender.97821
 
-api-version: 1.17
+api-version: 1.19
 load: POSTWORLD
 main: de.scientarus.adventskalender.main.Main
 
