@@ -20,6 +20,7 @@ permissions:
 commands:
     adventskalender:
         description: "Zeigt den Adventskalender an"
+        aliases: [adventcalendar , adc]
         permission: adventskalender.command
         permission-message: "Du hast nicht die Berechtigung den Adventskalender aufzurufen"
     
